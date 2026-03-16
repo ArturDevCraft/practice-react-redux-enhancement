@@ -6,17 +6,20 @@ import Task03 from './../../03/Task03';
 import Task04 from './../../04/Task04';
 import Task05 from './../../05/Task05';
 
+import { GithubProvider } from '../modules/github';
 
 const App = () => {
-    return (
-        <>
-            <Task01 />
-            <Task02 /> 
-            <Task03 />
-            <Task04 />
-            <Task05 />
-        </>
-    )
-}
+	return (
+		<>
+			<Task01 />
+			<Task02 />
+			<GithubProvider>
+				<Task03 />
+			</GithubProvider>
+			<Task04 />
+			<Task05 />
+		</>
+	);
+};
 
 export default App;
