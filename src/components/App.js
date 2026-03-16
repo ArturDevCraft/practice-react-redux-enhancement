@@ -8,19 +8,24 @@ import Task05 from './../../05/Task05';
 
 import { GithubProvider } from '../modules/github';
 import { StackOverflowProvider } from '../modules/stackoverflow';
+import { CombinedProvider } from '../modules/combined';
 
 const App = () => {
 	return (
 		<>
 			<Task01 />
 			<Task02 />
+
 			<GithubProvider>
 				<Task03 />
 			</GithubProvider>
 			<StackOverflowProvider>
 				<Task04 />
 			</StackOverflowProvider>
-			<Task05 />
+
+			<CombinedProvider>
+				<Task05 />
+			</CombinedProvider>
 		</>
 	);
 };

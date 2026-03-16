@@ -1,7 +1,7 @@
-const SAVE_QUESTIONS = 'saveQuestions';
-const ADD_ERROR = 'addError';
-const CLEAR_ERRORS = 'clearErrors';
-const SET_FILTER = 'setFilter';
+const SAVE_QUESTIONS = 'saveStackQuestions';
+const ADD_ERROR = 'addStackError';
+const CLEAR_ERRORS = 'clearStackErrors';
+const SET_FILTER = 'setStackFilter';
 
 export default {
 	ADD_ERROR,

@@ -3,15 +3,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import { StackOverflowAPI } from '.';
 import { stackOverflowActions } from '.';
 
-export default function StacOverflow() {
+export default function StackOverflow() {
 	const gitApi = new StackOverflowAPI();
 	const { saveQuestions, setUserName, setFilter, addError, clearErrors } =
 		stackOverflowActions;
-	const errors = useSelector((state) => state.errors);
-	const questions = useSelector((state) => state.questions);
-	const userName = useSelector((state) => state.userName);
-	const filter = useSelector((state) => state.filter);
-	const filtredQuestions = useSelector((state) => state.filtredQuestions);
+
+	const errors = useSelector(
+		(state) => state.stackoverflow?.errors || state.errors || [],
+	);
+
+	const questions = useSelector(
+		(state) => state.stackoverflow?.questions || state.questions || [],
+	);
+
+	const filter = useSelector(
+		(state) => state.stackoverflow?.filter || state.filter || '',
+	);
+
+	const filtredQuestions = useSelector(
+		(state) =>
+			state.stackoverflow?.filtredQuestions || state.filtredQuestions || [],
+	);
 
 	const dispatch = useDispatch();
 
@@ -41,10 +53,6 @@ export default function StacOverflow() {
 			</li>
 		));
 	};
-
-	useEffect(() => {
-		userName && getQuestionsHandler();
-	}, []);
 
 	return (
 		<>

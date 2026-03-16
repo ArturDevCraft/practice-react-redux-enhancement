@@ -1,8 +1,8 @@
-const SAVE_REPOS = 'saveRepos';
-const SET_USERNAME = 'setUserName';
-const ADD_ERROR = 'addError';
-const CLEAR_ERRORS = 'clearErrors';
-const SET_FILTER = 'setFilter';
+const SAVE_REPOS = 'saveGithubRepos';
+const SET_USERNAME = 'setGithubUserName';
+const ADD_ERROR = 'addGithubError';
+const CLEAR_ERRORS = 'clearGithubErrors';
+const SET_FILTER = 'setGithubFilter';
 
 export default {
 	ADD_ERROR,

@@ -7,11 +7,26 @@ export default function Github() {
 	const gitApi = new GitHubAPI();
 	const { saveRepos, setUserName, setFilter, addError, clearErrors } =
 		githubActions;
-	const errors = useSelector((state) => state.errors);
-	const repos = useSelector((state) => state.repos);
-	const userName = useSelector((state) => state.userName);
-	const filter = useSelector((state) => state.filter);
-	const filtredRepos = useSelector((state) => state.filtredRepos);
+
+	const errors = useSelector(
+		(state) => state.github?.errors || state.errors || [],
+	);
+
+	const repos = useSelector(
+		(state) => state.github?.repos || state.repos || [],
+	);
+
+	const userName = useSelector(
+		(state) => state.github?.userName || state.userName || '',
+	);
+
+	const filter = useSelector(
+		(state) => state.github?.filter || state.filter || '',
+	);
+
+	const filtredRepos = useSelector(
+		(state) => state.github?.filtredRepos || state.filtredRepos || [],
+	);
 
 	const dispatch = useDispatch();
 
