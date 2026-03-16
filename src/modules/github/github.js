@@ -38,7 +38,7 @@ export default function Github() {
 	};
 
 	useEffect(() => {
-		userName && getReposHandler();
+		// userName && getReposHandler();
 	}, []);
 
 	return (

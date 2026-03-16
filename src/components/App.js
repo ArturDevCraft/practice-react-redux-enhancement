@@ -13,8 +13,10 @@ const App = () => {
 	return (
 		<>
 			<Task01 />
-			{/* <Task02 /> */}
-			<GithubProvider>{/* <Task03 /> */}</GithubProvider>
+			<Task02 />
+			<GithubProvider>
+				<Task03 />
+			</GithubProvider>
 			<StackOverflowProvider>
 				<Task04 />
 			</StackOverflowProvider>
