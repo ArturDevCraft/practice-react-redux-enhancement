@@ -23,7 +23,7 @@ const githubReducer = (state = initState, action) => {
 				userName: userName,
 			};
 		case types.SET_FILTER:
-			const { filter, filtredRepos } = action.payload;
+			const { filter } = action.payload;
 			return {
 				...state,
 				filter: filter,
